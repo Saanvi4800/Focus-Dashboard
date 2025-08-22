@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body onload="startTime()">
+<div class="Cards">
+    <div class="card-container left">
+        <div class="Tasks">
+            <div class="card-title">Tasks</div>
+        </div>
+        <div class="Progress-Bar"><div class="card-title">Progress Bar</div></div>
+        <div class="cardleft"><div class="card-title">Motivational Quote</div></div>
+    </div>
+    <div class="card-container center">
+        <div class="cardcenter">
+            <div class="clock" id="txt"></div>
+        </div>
+    </div>
+    <div class="card-container right">
+        <div class="cardright-toptwo"><div class="card-title">Notes</div>
+         <input type="text" placeholder="Begin typing thoughts..." />
+        </div>
+        <div class="cardright-toptwo"><div class="card-title">Pomodoro Timer</div></div>
+        <div class="cardright">
+            <div class ="card-title">Music</div>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/740YDFxFUEbknQGJl8Raun?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
