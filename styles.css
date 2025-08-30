@@ -64,6 +64,7 @@ body {
     margin-right:-390px;
     width:500px;
     height:300px;
+    
 }
 
 .cardleft {
@@ -102,6 +103,8 @@ body {
     color: #333;
     text-align:center;
 }
+
+
 
 
 .startTimer{
@@ -265,3 +268,39 @@ ul li span:hover{
     border-radius:90%;
 }
 
+
+#progress-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+#progress-bar::-webkit-progress-bar {
+    background-color: #8a5b79; 
+    border-radius: 10px;
+}
+
+
+#progress-bar::-webkit-progress-value {
+    background-color: #6b056e; 
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; 
+}
+
+
+#progress-bar::-moz-progress-bar {
+    background-color: #6b056e;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}

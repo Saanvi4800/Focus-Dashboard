@@ -24,6 +24,8 @@ function checkTime(i) {
   return i;
 }
 
+
+
  //Timer stuff
 let timerInterval;
 
@@ -86,41 +88,69 @@ let quoteDeciding = Math.floor(Math.random()*10);
 
 //Tasks
 
+
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const progressBar = document.getElementById("progress-bar");
+const progressText = document.getElementById("progress-text");
 
 function addTask(){
     if(inputBox.value === ''){
-        alert("Pro Tip: Try typing something in the test box");
+        alert("Pro Tip: Try typing something in the text box");
+        return;
     } 
-    else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
-    }
+
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7"; // delete button
+    li.appendChild(span);
+
+    listContainer.appendChild(li);
+
     inputBox.value = "";
     saveData();
+    updateProgress();
 }
 
+// Handle checking/unchecking and deleting
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
-         saveData();
+        saveData();
+        updateProgress();
     } else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         saveData();
+        updateProgress();
     }
 }, false);
 
+function updateProgress(){
+    const allTasks = listContainer.querySelectorAll('li').length;
+    if(allTasks === 0){
+        progressBar.value = 0;
+        progressText.textContent = "0%";
+        return;
+    }
+
+    const checkedTasks = listContainer.querySelectorAll('li.checked').length;
+    const percent = Math.round((checkedTasks / allTasks) * 100);
+
+    progressBar.value = percent;
+    progressText.textContent = percent + "%";
+}
+
 function saveData(){
-      localStorage.setItem("data", listContainer.innerHTML);
+    localStorage.setItem("data", listContainer.innerHTML);
 }
 
 function showTask(){
-      listContainer.innerHTML = localStorage.getItem("data");
+    listContainer.innerHTML = localStorage.getItem("data") || "";
+    updateProgress(); // update progress on page load
 }
 
 showTask();
+
+
