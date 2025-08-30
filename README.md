@@ -5,7 +5,7 @@
 This is my second website just to learn website design and coding and my first one using JS. It is not connected or affiliated with any other websites or people. This website has many different features like music, countdown timer, clock, task and progress bar, motivational quotes, and notes space. Here is the link to the website: https://saanvi4800.github.io/Focus-Dashboard/
 
 ## Navigating the website
-This website is pretty simple, with only one page displaying several cards that each house a different feature. For example the center one has a clock, and the top left has a tasks list.
+This website is pretty simple, with only one page displaying several cards that each house a different feature. For example the center one has a clock, and the top left has a tasks list. Also it does stretch out weird on larger screens so to see it how it was originally made try minimizing the window slightly. If you cannot do that it still is fine, the cards may just look slightly small for the screen.
 
 ## Technologies Used
 HTML<br>
