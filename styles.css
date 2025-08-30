@@ -144,7 +144,9 @@ body {
     overflow:auto;
     field-sizing:content;
     background:#86647a;
-    border-radius:4px;
+    border-radius:2px;
+    border-color: #333;
+    border-width: 2px;
 }
 textarea{
     font-family: 'Courier New', Courier, monospace;
@@ -153,6 +155,7 @@ textarea{
 
 ::placeholder{
     color:#ffffff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .quote{
@@ -163,3 +166,102 @@ textarea{
     text-align: center;
     margin-top: 10px;
 }
+
+.row{
+    display:flex;
+    align-items:left;
+    justify-content:left;
+    background:#8a5b79;
+    border-radius:2px;
+    padding-right:30px;
+    margin-bottom:25px;
+    border:none;
+    margin-left:-20px;
+}
+
+.input-box{
+    flex:1;
+    outline:none;
+    background:transparent;
+    padding:10px;
+    width:150px;
+    border:none;
+    font-family: 'Courier New', Courier, monospace;
+    color:#ffffff;
+   
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    outline:none;
+    padding:10px 15px;
+    background:#fceff7;
+    color:#8a5b79;
+    border-color: #8a5b79;
+    border-radius:2px;
+    cursor:pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.list-container {
+  max-height: 90px;
+  width: 210px;
+  overflow-y: auto;
+  overflow-x: auto;
+  margin-left: -20px;
+}
+
+ul li{
+    font-family: 'Courier New', Courier, monospace;
+    list-style:none;
+    font-size:17px;
+    padding-left:25px;
+    padding: 1px 4px 12px 2px;
+    margin-left:-20px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+}
+
+ul li::before{
+    content: "";
+    position:absolute;
+    height:14px;
+    width:14px;
+    border-radius:50%;
+    background-size:cover;
+    background-color:center;
+    background-image:url(Images/Untitled_design__1_-removebg-preview.png);
+    top: 2px;
+    left:-18px;
+}
+
+
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image:url(Images/Checked.png);
+    background-size:cover;
+    background-color:center;
+}
+
+ul li span{
+    position:absolute;
+    right:0;
+    top:-7px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color:#8a5b79;
+    line-height:40px;
+    text-align:center;
+}
+
+ul li span:hover{
+    background:#fde5f4;
+    border-radius:90%;
+}
+
