@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body onload="startTime(); newQuote();">
 <div class="Cards">
     <div class="card-container left">
         <div class="Tasks">
             <div class="card-title">Tasks</div>
+            <div class = "row">
+                <input class="input-box" type="text" id="input-box" placeholder="Add a new task...">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul class="list-container" id="list-container">
+            </ul>
         </div>
         <div class="Progress-Bar"><div class="card-title">Progress Bar</div></div>
         <div class="cardleft"><div class="card-title">Motivational Quote</div>
@@ -44,6 +49,6 @@
 </div>
 
 
-
+<script src="script.js"></script>
 </body>
 </html>
